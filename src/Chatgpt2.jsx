@@ -6,8 +6,8 @@ function ChatGPT() {
     {
       role: "bot",
       content:
-        "Hi,i am Bot By Mohit Rajpoot, How can i help you finding things on internet?"
-    }
+        "Hi,i am Bot By Mohit Rajpoot, How can i help you finding things on internet?",
+    },
   ]);
   const [inputMessage, setInputMessage] = useState("");
 
@@ -18,12 +18,12 @@ function ChatGPT() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer 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`
+        Authorization: `Bearer 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`,
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: inputMessage }]
-      })
+        messages: [{ role: "user", content: inputMessage }],
+      }),
     });
     const { choices } = await response.json();
     console.log(choices);
@@ -32,8 +32,8 @@ function ChatGPT() {
         ...messages,
         {
           role: "bot",
-          content: choices[0].message.content.replace(/\n/g, "<br/>")
-        }
+          content: choices[0].message.content.replace(/\n/g, "<br/>"),
+        },
       ]);
       setInputMessage("");
     }
