@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
+let key = "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";
 function ChatGPT() {
   const [messages, setMessages] = useState([
     {
@@ -18,7 +19,7 @@ function ChatGPT() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer ${key}`,
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
