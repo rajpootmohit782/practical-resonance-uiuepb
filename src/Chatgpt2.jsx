@@ -18,7 +18,7 @@ function ChatGPT() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer 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`,
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
